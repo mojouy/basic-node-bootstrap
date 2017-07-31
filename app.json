@@ -1,0 +1,7 @@
+{
+  "name": "Basic Node-sass-bootstrap",
+  "description": "A barebones Node.js app using sass, bootstrap and Express",
+  "repository": "https://github.com/mojouy/basic-node-landing.git",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "static", "sass", "bootstrap", "compass"]
+}

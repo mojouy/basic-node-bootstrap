@@ -1,4 +1,4 @@
-# basic-node-landing
+# basic-node-bootstrap
 Basic landing page node environment, with sass, compass and bootstrap
 
 ## Compile build
