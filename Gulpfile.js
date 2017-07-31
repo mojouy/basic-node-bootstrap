@@ -11,8 +11,9 @@ gulp.task('styles', function () {
   gulp.src('src/scss/application.scss')
     .pipe(sass({
       includePaths: [
-       'node_modules/foundation-sites/scss',
-       'node_modules/compass-mixins/lib'
+        'node_modules/compass-mixins/lib',
+        'node_modules/tether/dist/tether.min.css',
+        'node_modules/bootstrap/scss'
       ],
       outputStyle: 'compressed'
     }).on('error', sass.logError))
@@ -22,7 +23,8 @@ gulp.task('styles', function () {
 gulp.task('js', function () {
   gulp.src('src/javascript/application.js')
     .pipe(browserify({
-      insertGlobals: true
+      insertGlobals: true,
+      includePaths: ['node_modules/tether/dist']
     }))
     .pipe(buffer())
     .pipe(uglify())
@@ -34,7 +36,8 @@ gulp.task('default', ['build', 'watch']);
 gulp.task('build', function () {
   gulp.src('src/javascript/application.js')
     .pipe(browserify({
-      insertGlobals: true
+      insertGlobals: true,
+      includePaths: ['node_modules/tether/dist']
     }))
     .pipe(buffer())
     .pipe(uglify())
@@ -43,8 +46,9 @@ gulp.task('build', function () {
   gulp.src('src/scss/application.scss')
     .pipe(sass({
       includePaths: [
-       'node_modules/foundation-sites/scss',
-       'node_modules/compass-mixins/lib'
+        'node_modules/compass-mixins/lib',
+        'node_modules/tether/dist/tether.min.css',
+        'node_modules/bootstrap/scss'
       ],
       outputStyle: 'compressed'
     }).on('error', sass.logError))
